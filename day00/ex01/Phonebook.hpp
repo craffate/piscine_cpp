@@ -6,18 +6,19 @@
 /*   By: craffate <craffate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 09:16:09 by craffate          #+#    #+#             */
-/*   Updated: 2021/05/14 08:07:17 by craffate         ###   ########.fr       */
+/*   Updated: 2021/05/17 13:43:15 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 # include "Contact.hpp"
+# include <locale>
 
 class Phonebook
 {
 	private:
-		Contact				_contacts[7];
+		Contact				_contacts[8];
 		static unsigned int	_count;
 	
 	public:

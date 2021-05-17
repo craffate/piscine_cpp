@@ -6,7 +6,7 @@
 /*   By: craffate <craffate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 09:05:47 by craffate          #+#    #+#             */
-/*   Updated: 2021/05/14 08:49:20 by craffate         ###   ########.fr       */
+/*   Updated: 2021/05/17 13:41:44 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void					Phonebook::add(void)
 	Contact				contact;
 	std::string			line;
 
-	if (6 < this->_count)
+	if (7 < this->_count)
 	{
 		std::cout << "Cannot add additional contact" << std::endl;
 		return;
@@ -58,6 +58,21 @@ void					Phonebook::add(void)
 	Phonebook::_count += 1;
 }
 
+static int				isnumber(const std::string s)
+{
+	int					ret;
+	unsigned int		idx;
+
+	ret = 0;
+	idx = -1u;
+	while (!ret && 0 != s[++idx])
+	{
+		if (!isdigit(s[idx]))
+			ret = 1;
+	}
+	return (ret);
+}
+
 void					Phonebook::search(void) const
 {
 	unsigned int		idx;
@@ -71,9 +86,15 @@ void					Phonebook::search(void) const
 	}
 	std::cout << "Please select an index:" << std::endl;
 	std::cin >> line;
-	idx = std::stoi(line);
-	if (0 < idx || Phonebook::_count < idx)
-		std::cout << "Index out of range!" << std::endl;
+	if (!isnumber(line))
+	{
+		idx = std::stoi(line);
+		std::cout << Phonebook::_count << std::endl;
+		if (Phonebook::_count <= idx)
+			std::cout << "Index out of range!" << std::endl;
+		else
+			this->_contacts[idx].printCoord();
+	}
 	else
-		this->_contacts[idx].printCoord();
+		std::cout << "Please enter a valid index" << std::endl;
 }
