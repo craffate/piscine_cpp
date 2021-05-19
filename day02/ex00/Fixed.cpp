@@ -6,17 +6,16 @@
 /*   By: craffate <craffate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 09:00:24 by craffate          #+#    #+#             */
-/*   Updated: 2021/05/19 09:15:14 by craffate         ###   ########.fr       */
+/*   Updated: 2021/05/19 09:43:25 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
 
-Fixed::Fixed(void)
+Fixed::Fixed(void) : _raw(0)
 {
 	std::cout << "Default constructor called" << std::endl;
-	this->_raw = 0;
 }
 
 Fixed::~Fixed(void)
