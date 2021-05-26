@@ -6,7 +6,7 @@
 /*   By: craffate <craffate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 10:08:30 by craffate          #+#    #+#             */
-/*   Updated: 2021/05/26 11:54:32 by craffate         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:01:09 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,12 +118,12 @@ void				ScavTrap::rangedAttack(std::string const &target)
 	if (0 < this->getHp())
 	{
 		std::cout << "SC4V-TP " << this->getName() << " attaque " << target
-		<< " à distance, causant " << this->getRanged() << " points de dégâts !" << std::endl;
+		<< " de loin, causant " << this->getRanged() << " points de dégâts !" << std::endl;
 	}
 	else
 	{
 		std::cout << "SC4V-TP " << this->getName() << " attaque " << target
-		<< " à distance, causant théoriquement " << this->getRanged() << " points de dégâts mais il est mort !" << std::endl;
+		<< " de loin, causant théoriquement " << this->getRanged() << " points de dégâts mais il est mort !" << std::endl;
 	}
 }
 
@@ -132,12 +132,12 @@ void				ScavTrap::meleeAttack(std::string const &target)
 	if (0 < this->getHp())
 	{
 		std::cout << "SC4V-TP " << this->getName() << " attaque " << target
-		<< " au corps à corps, causant " << this->getMelee() << " points de dégâts !" << std::endl;
+		<< " en mélée, causant " << this->getMelee() << " points de dégâts !" << std::endl;
 	}
 	else
 	{
 		std::cout << "SC4V-TP " << this->getName() << " essai d'attaquer " << target
-		<< " au corps à corps, causant théoriquement " << this->getMelee() << " points de dégâts mais il est mort !" << std::endl;
+		<< "  en mélée, causant théoriquement " << this->getMelee() << " points de dégâts mais il est mort !" << std::endl;
 	}
 }
 
