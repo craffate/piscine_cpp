@@ -6,7 +6,7 @@
 /*   By: craffate <craffate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 16:09:05 by craffate          #+#    #+#             */
-/*   Updated: 2021/05/26 09:24:18 by craffate         ###   ########.fr       */
+/*   Updated: 2021/05/26 10:10:50 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 FragTrap::FragTrap(std::string name) : _hp(100), _max_hp(100), _energy(100),
 _max_energy(100), _level(1), _name(name), _melee(30), _ranged(20), _armor(5)
 {
-	std::cout << "Je m'appelle Trap, Clap" << " \"" << this->getName() << "\" "<< "Trap, zéro zéro Trap." << std::endl;
+	std::cout << "Je m'appelle Trap, Frag" << " \"" << this->getName() << "\" "<< "Trap, zéro zéro Trap." << std::endl;
 }
 
 FragTrap::~FragTrap(void)
