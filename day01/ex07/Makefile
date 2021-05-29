@@ -1,13 +1,16 @@
 NAME = replace
 CC = clang++
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I./
 SRCS = main.cpp
 OBJS = main.o
 
 all: $(NAME)
 
-$(NAME):
-	$(CC) -o $(NAME) $(SRCS) $(CFLAGS) -I./
+$(NAME): $(OBJS)
+	$(CC) -o $(NAME) $(OBJS)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
 	rm -f $(OBJS)
