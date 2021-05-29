@@ -1,13 +1,16 @@
 NAME = phonebook
 CC = clang++
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I./
 SRCS = main.cpp Phonebook.cpp Contact.cpp
 OBJS = main.o Phonebook.o Contact.o
 
 all: $(NAME)
 
-$(NAME):
-	$(CC) -o $(NAME) $(SRCS) $(CFLAGS) -I.
+$(NAME): $(OBJS)
+	$(CC) -o $(NAME) $(OBJS)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
 	rm -f $(OBJS)

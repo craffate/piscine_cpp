@@ -6,7 +6,7 @@
 /*   By: craffate <craffate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 09:54:55 by craffate          #+#    #+#             */
-/*   Updated: 2021/05/14 08:53:46 by craffate         ###   ########.fr       */
+/*   Updated: 2021/05/29 10:10:00 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void				Contact::askFname(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setFname(line);
 }
 
@@ -52,7 +52,7 @@ void				Contact::askLname(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setLname(line);
 }
 
@@ -70,7 +70,7 @@ void				Contact::askNick(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setNick(line);
 }
 
@@ -88,7 +88,7 @@ void				Contact::askLogin(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setLogin(line);
 }
 
@@ -106,7 +106,7 @@ void				Contact::askAddr(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setAddr(line);
 }
 
@@ -124,7 +124,7 @@ void				Contact::askMail(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setMail(line);
 }
 
@@ -142,7 +142,7 @@ void				Contact::askPhone(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setPhone(line);
 }
 
@@ -160,7 +160,7 @@ void				Contact::askBday(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setBday(line);
 }
 
@@ -178,7 +178,7 @@ void				Contact::askMeal(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setMeal(line);
 }
 
@@ -196,7 +196,7 @@ void				Contact::askColor(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setColor(line);
 }
 
@@ -214,7 +214,7 @@ void				Contact::askSecret(void)
 {
 	std::string		line;
 
-	std::cin >> line;
+	std::getline(std::cin, line);
 	this->setSecret(line);
 }
 

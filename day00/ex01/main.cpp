@@ -6,7 +6,7 @@
 /*   By: craffate <craffate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 10:18:04 by craffate          #+#    #+#             */
-/*   Updated: 2021/05/13 14:53:35 by craffate         ###   ########.fr       */
+/*   Updated: 2021/05/29 10:08:32 by craffate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int						main(void)
 	while (0 == ret)
 	{
 		std::cout << "Please enter a command:" << std::endl;
-		std::cin >> line;
+		std::getline(std::cin, line);
 		if (0 == line.compare("ADD"))
 			phonebook.add();
 		else if (0 == line.compare("SEARCH"))
